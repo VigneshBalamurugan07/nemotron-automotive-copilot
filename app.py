@@ -226,6 +226,19 @@ with col_header2:
     </div>
     """, unsafe_allow_html=True)
 
+# Personalized Driver Greeting Banner
+st.markdown("""
+<div style="background: linear-gradient(90deg, rgba(14, 22, 38, 0.9) 0%, rgba(14, 30, 46, 0.9) 100%); border-left: 4px solid #76B900; border-radius: 8px; padding: 10px 16px; margin-bottom: 18px; display: flex; align-items: center; justify-content: space-between;">
+    <div>
+        <span style="color: #76B900; font-weight: 700; font-size: 0.95rem;">👋 Welcome, Driver Vignesh Balamurugan!</span>
+        <span style="color: #94A3B8; font-size: 0.85rem; margin-left: 8px;">NemoDrive Safety Shield is online. Have a safe and smooth drive! 🛡️✨</span>
+    </div>
+    <div style="color: #00F0FF; font-size: 0.8rem; font-weight: 600;">
+        🌤️ Clear Highway • Physics Guardrails Nominal
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 
 # Show Active Proactive Hazard Banner if alert exists
 active_hazards = st.session_state.hazard_detector.active_alerts
