@@ -99,8 +99,8 @@ Nemotron/
 ### 1. Clone & Install with `uv`
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/nemodrive-ai.git
-cd nemodrive-ai
+git clone https://github.com/VigneshBalamurugan07/nemotron-automotive-copilot.git
+cd nemotron-automotive-copilot
 
 # Install dependencies using uv (or standard pip)
 uv sync
@@ -153,7 +153,7 @@ To solve this, I built NemoDrive-AI:
 ✅ Built with modern Python tooling (uv, Streamlit Cyber-Cockpit HUD, Plotly live strip charts)
 
 Check out the full open-source repo and interactive demo on GitHub! 👇
-🔗 https://github.com/your-username/nemodrive-ai
+🔗 https://github.com/VigneshBalamurugan07/nemotron-automotive-copilot
 
 #NVIDIA #Nemotron #GenerativeAI #Automotive #AutonomousVehicles #AI #Python #MachineLearning #SmartMobility #GenAI
 ```
