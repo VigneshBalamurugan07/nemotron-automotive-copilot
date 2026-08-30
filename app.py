@@ -226,15 +226,24 @@ with col_header2:
     </div>
     """, unsafe_allow_html=True)
 
-# Personalized Driver Greeting Banner
+# Personalized Driver Greeting Banner (Premium Automotive HUD Style)
 st.markdown("""
-<div style="background: linear-gradient(90deg, rgba(14, 22, 38, 0.9) 0%, rgba(14, 30, 46, 0.9) 100%); border-left: 4px solid #76B900; border-radius: 8px; padding: 10px 16px; margin-bottom: 18px; display: flex; align-items: center; justify-content: space-between;">
-    <div>
-        <span style="color: #76B900; font-weight: 700; font-size: 0.95rem;">👋 Welcome, Driver Vignesh Balamurugan!</span>
-        <span style="color: #94A3B8; font-size: 0.85rem; margin-left: 8px;">NemoDrive Safety Shield is online. Have a safe and smooth drive! 🛡️✨</span>
+<div style="background: linear-gradient(135deg, #0E1626 0%, #131F37 100%); border: 1px solid #1E293B; border-left: 4px solid #76B900; border-radius: 12px; padding: 12px 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="background: rgba(118, 185, 0, 0.15); color: #76B900; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; border: 1px solid rgba(118, 185, 0, 0.4);">
+            👋 Welcome, Vignesh!
+        </span>
+        <span style="color: #E2E8F0; font-size: 0.9rem; font-weight: 500;">
+            NemoDrive Safety Shield is active • Have a safe and smooth drive ahead! 🛡️✨
+        </span>
     </div>
-    <div style="color: #00F0FF; font-size: 0.8rem; font-weight: 600;">
-        🌤️ Clear Highway • Physics Guardrails Nominal
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="background: rgba(0, 240, 255, 0.1); color: #00F0FF; padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; border: 1px solid rgba(0, 240, 255, 0.3);">
+            🌤️ Clear Highway
+        </span>
+        <span style="background: rgba(118, 185, 0, 0.1); color: #76B900; padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; border: 1px solid rgba(118, 185, 0, 0.3);">
+            ● Physics Guardrails Nominal
+        </span>
     </div>
 </div>
 """, unsafe_allow_html=True)
