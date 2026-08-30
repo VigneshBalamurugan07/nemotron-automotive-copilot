@@ -5,7 +5,7 @@
 [![NVIDIA Nemotron](https://img.shields.io/badge/NVIDIA-Nemotron--70B-76B900.svg)](https://build.nvidia.com)
 [![VSS Telemetry](https://img.shields.io/badge/COVESA-VSS%20Compliant-00F0FF.svg)](https://covesa.global/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Copyright%202026%20Vignesh%20Balamurugan-blue.svg)](LICENSE)
 
 ---
 
@@ -138,4 +138,4 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 ---
 
 ## 📜 License
-Distributed under the MIT License. See `LICENSE` for more information.
+Copyright © 2026 Vignesh Balamurugan. All Rights Reserved. See [`LICENSE`](LICENSE) for terms.
