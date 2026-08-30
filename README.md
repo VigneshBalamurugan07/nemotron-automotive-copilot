@@ -137,28 +137,5 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
-## 💼 LinkedIn Showcase Post Template
-
-Ready to share your project on LinkedIn? Here is a crafted post template:
-
-```markdown
-🚀 Excited to introduce NemoDrive-AI — an In-Cabin Proactive Safety & Accident Prevention Copilot powered by NVIDIA Nemotron! 🏎️⚡
-
-Did you know that over 60% of drivers ignore traditional dashboard warning lights due to "alert fatigue"? When critical mechanical failures occur (like brake fade on mountain roads or battery thermal runaway in EVs), generic amber lights fail to convey root cause or life-saving recovery steps.
-
-To solve this, I built NemoDrive-AI:
-✅ Ingests 18+ high-frequency CAN-bus telemetry signals (VSS-compliant)
-✅ Uses NVIDIA's Llama-3.1-Nemotron-70B for deep physics-grounded multi-step reasoning
-✅ Implements Proactive Voice Interventions that actively speak emergency recovery steps before accidents occur
-✅ Built with modern Python tooling (uv, Streamlit Cyber-Cockpit HUD, Plotly live strip charts)
-
-Check out the full open-source repo and interactive demo on GitHub! 👇
-🔗 https://github.com/VigneshBalamurugan07/nemotron-automotive-copilot
-
-#NVIDIA #Nemotron #GenerativeAI #Automotive #AutonomousVehicles #AI #Python #MachineLearning #SmartMobility #GenAI
-```
-
----
-
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
