@@ -180,10 +180,10 @@ with st.sidebar:
         btn_type = "primary" if is_current else "secondary"
         if st.button(sc["name"], key=f"btn_{sc_key}", use_container_width=True, type=btn_type):
             st.session_state.active_scenario = sc_key
-            if sc_key == "nominal":
-                st.session_state.can_simulator.clear_overrides()
-            else:
+            st.session_state.can_simulator.clear_overrides()
+            if sc_key != "nominal":
                 st.session_state.can_simulator.inject_override(sc["overrides"])
+            st.session_state.orchestrator.last_triggered_hazard_code = None
             st.rerun()
 
     st.markdown("---")
@@ -206,6 +206,7 @@ with st.sidebar:
         st.session_state.can_simulator.clear_overrides()
         st.session_state.active_scenario = "nominal"
         st.session_state.latest_audio_html = ""
+        st.session_state.orchestrator.last_triggered_hazard_code = None
         st.rerun()
 
 

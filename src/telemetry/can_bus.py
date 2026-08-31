@@ -105,8 +105,9 @@ class CANBusSimulator:
         )
 
     def inject_override(self, overrides: Dict[str, Any]):
-        """Inject specific sensor overrides immediately."""
-        self.injected_overrides.update(overrides)
+        """Inject specific sensor overrides cleanly from nominal state."""
+        self.current_state = self._get_default_state()
+        self.injected_overrides = dict(overrides)
         for k, v in overrides.items():
             if hasattr(self.current_state, k):
                 setattr(self.current_state, k, v)
