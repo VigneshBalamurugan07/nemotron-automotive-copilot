@@ -1,8 +1,8 @@
 # 🏎️ NemoDrive-AI: In-Cabin Proactive Safety & Accident Prevention Copilot
-### *Powered by NVIDIA Nemotron (`nvidia/llama-3.1-nemotron-70b-instruct` / NIM) & Real-Time CAN-Bus Telemetry*
+### *Powered by NVIDIA Nemotron 3.5 Lightning (`nvidia/nemotron-3.5-lightning-30b-a3b` / NIM) & Real-Time CAN-Bus Telemetry*
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![NVIDIA Nemotron](https://img.shields.io/badge/NVIDIA-Nemotron--70B-76B900.svg)](https://build.nvidia.com)
+[![NVIDIA Nemotron](https://img.shields.io/badge/NVIDIA-Nemotron--3.5--Lightning-76B900.svg)](https://build.nvidia.com)
 [![VSS Telemetry](https://img.shields.io/badge/COVESA-VSS%20Compliant-00F0FF.svg)](https://covesa.global/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![License](https://img.shields.io/badge/License-Copyright%202026%20Vignesh%20Balamurugan-blue.svg)](LICENSE)
@@ -13,7 +13,7 @@
 
 In modern Software-Defined Vehicles (SDVs), **over 60% of drivers ignore or disable traditional warning beeps** due to *Alert Fatigue*—cryptic dashboard lights (like "Check Engine" or amber ABS icons) fail to convey **root cause, urgency, or life-saving recovery instructions** until catastrophic failure or accidents occur.
 
-**NemoDrive-AI** bridges the critical gap between raw vehicle sensor streams and human-safe decision making. It continuously ingests **18+ CAN-bus telemetry metrics** (brake pad thermals, hydraulic line pressure, wheel slip ratios, EV battery cell temperature gradients $\Delta T / \Delta t$, road friction $\mu$, and ADAS Time-to-Collision), applies deterministic physics guardrails, and deploys **NVIDIA Nemotron's deep multi-step reasoning** to proactively intervene with **urgent spoken voice alerts** before accidents happen.
+**NemoDrive-AI** bridges the critical gap between raw vehicle sensor streams and human-safe decision making. It continuously ingests **18+ CAN-bus telemetry metrics** (brake pad thermals, hydraulic line pressure, wheel slip ratios, EV battery cell temperature gradients $\Delta T / \Delta t$, road friction $\mu$, and ADAS Time-to-Collision), applies deterministic physics guardrails, and deploys **NVIDIA Nemotron 3.5 Lightning's ultra-low latency MoE reasoning** to proactively intervene with **urgent spoken voice alerts** before accidents happen.
 
 ```
                       ┌──────────────────────────────────────────┐
@@ -40,8 +40,9 @@ In modern Software-Defined Vehicles (SDVs), **over 60% of drivers ignore or disa
                                            │
                                            ▼
          ┌───────────────────────────────────────────────────────────────────┐
-         │                  NVIDIA Nemotron Reasoning Core                   │
-         │  - Model: nvidia/llama-3.1-nemotron-70b-instruct / Nemotron-NIM   │
+         │              NVIDIA Nemotron 3.5 Lightning Engine                 │
+         │  - Model: nvidia/nemotron-3.5-lightning-30b-a3b / Nemotron-NIM    │
+         │  - Mamba-2 + MoE Hybrid Architecture (<100ms TTFT)                │
          │  - Multi-step Physics & Telemetry Diagnostic Reasoning            │
          └───────────────────────────────────────────────────────────────────┘
 ```
@@ -51,7 +52,7 @@ In modern Software-Defined Vehicles (SDVs), **over 60% of drivers ignore or disa
 ## ⚡ Key Features
 
 - 🏎️ **Proactive Voice Interventions (Accident Prevention)**: Unlike passive chatbots, NemoDrive-AI monitors the CAN stream in real-time and actively interrupts the driver with authoritative voice guidance when hazardous conditions emerge (e.g. Brake Fade downhill, EV Thermal Runaway, Black Ice).
-- 🧠 **NVIDIA Nemotron Reasoning Engine**: Leverages `nvidia/llama-3.1-nemotron-70b-instruct` via NVIDIA NIM for multi-step physics correlation and tool-calling.
+- 🧠 **NVIDIA Nemotron 3.5 Lightning Reasoning Core**: Leverages `nvidia/nemotron-3.5-lightning-30b-a3b` via NVIDIA NIM for ultra-fast, sub-100ms multi-step physics correlation and tool-calling.
 - 📡 **VSS-Compliant CAN-Bus Telemetry**: 18+ live signals across Vehicle Dynamics, Braking, EV Battery Pack, Tires, and ADAS.
 - 🛠️ **Automotive Physics Tool Registry**:
   - `calculate_stopping_distance(speed_kmh, road_friction_mu)`: Calculates Newtonian stopping distance $d = v \cdot t_{\text{rxn}} + \frac{v^2}{2 \mu g}$.
@@ -113,7 +114,7 @@ cp .env.example .env
 Add your free NVIDIA API Key from [build.nvidia.com](https://build.nvidia.com):
 ```env
 NVIDIA_API_KEY=nvapi-your-key-here
-NEMOTRON_MODEL=nvidia/llama-3.1-nemotron-70b-instruct
+NEMOTRON_MODEL=nvidia/nemotron-3.5-lightning-30b-a3b
 ```
 *(Note: If no API key is provided, NemoDrive-AI runs seamlessly using its built-in high-fidelity physics reasoning engine!)*
 
