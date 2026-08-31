@@ -190,8 +190,8 @@ with st.sidebar:
     st.markdown("### 🧠 **AI Intelligence Core**")
     st.markdown("""
     <div style="background: #0E1626; border: 1px solid #76B900; border-radius: 8px; padding: 10px;">
-        <div style="color: #76B900; font-weight: 700; font-size: 0.88rem;">NVIDIA Llama-3.1-Nemotron-70B</div>
-        <div style="color: #94A3B8; font-size: 0.78rem;">Deep Reasoning & Multi-Step Tool Calling</div>
+        <div style="color: #76B900; font-weight: 700; font-size: 0.88rem;">NVIDIA Nemotron Reasoning Engine</div>
+        <div style="color: #94A3B8; font-size: 0.78rem;">Nemotron 3.5 Lightning / 70B • Multi-Step Physics Tools</div>
     </div>
     """, unsafe_allow_html=True)
     

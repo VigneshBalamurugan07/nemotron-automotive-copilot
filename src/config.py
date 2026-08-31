@@ -42,7 +42,8 @@ class AppConfig:
     """General configuration for NemoDrive-AI."""
     nvidia_api_key: str = os.getenv("NVIDIA_API_KEY", "")
     nvidia_base_url: str = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
-    model_name: str = "nvidia/llama-3.1-nemotron-70b-instruct"
+    # Latest active NVIDIA Nemotron generation on build.nvidia.com
+    model_name: str = os.getenv("NEMOTRON_MODEL", "nvidia/nemotron-3.5-lightning-30b-a3b")
     enable_voice_tts: bool = os.getenv("ENABLE_VOICE_TTS", "true").lower() == "true"
     voice_language: str = os.getenv("VOICE_LANGUAGE", "en")
     safety: SafetyThresholds = SafetyThresholds()
